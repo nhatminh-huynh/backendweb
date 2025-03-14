@@ -8,6 +8,10 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+  res.send('Backend is running! Use /search?q=yourquery');
+});
+
 app.get('/search', async (req, res) => {
   const query = req.query.q;
 
